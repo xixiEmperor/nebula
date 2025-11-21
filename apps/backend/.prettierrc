@@ -1,0 +1,58 @@
+{
+  /* ===== Prettier 基础代码格式化配置 ===== */
+  
+  // 使用单引号：'hello' 而不是 "hello"
+  // true: 使用单引号，更简洁
+  // false: 使用双引号，更传统
+  "singleQuote": true,
+  
+  // 尾随逗号：对象和数组最后一个元素后是否加逗号
+  // "none": 不加逗号 { a: 1, b: 2 }
+  // "es5": ES5 兼容 { a: 1, b: 2, }
+  // "all": 所有地方都加 { a: 1, b: 2, }
+  "trailingComma": "es5",
+  
+  // 分号：语句结尾是否加分号
+  // true: 总是加分号 console.log('hello');
+  // false: 尽量不加分号 console.log('hello')
+  "semi": true,
+  
+  // 制表符宽度：一个缩进等于多少个空格
+  // 2: 两个空格缩进（更紧凑）
+  // 4: 四个空格缩进（更清晰）
+  "tabWidth": 2,
+  
+  // 使用制表符：是否用 Tab 键而不是空格
+  // true: 使用 Tab 键缩进
+  // false: 使用空格缩进（推荐）
+  "useTabs": false,
+  
+  // 行宽：一行最多多少个字符
+  // 80: 传统标准，适合小屏幕
+  // 100: 现代标准，适合大屏幕
+  // 120: 宽松标准，减少换行
+  "printWidth": 100
+  
+  /* ===== 进阶格式化选项（已注释，需要时可启用） ===== */
+  
+  // 括号间距：对象字面量的大括号内是否加空格
+  // "bracketSpacing": true,  // { foo: bar } 而不是 {foo: bar}
+  
+  // 箭头函数参数括号：单参数时是否加括号
+  // "arrowParens": "avoid",  // x => x 而不是 (x) => x
+  
+  // 换行符：使用什么换行符
+  // "endOfLine": "lf",  // Unix 风格 (\n)
+  
+  // HTML 空白敏感性：HTML 中的空白如何处理
+  // "htmlWhitespaceSensitivity": "css",
+  
+  // JSX 括号换行：JSX 元素的 > 是否单独一行
+  // "bracketSameLine": false,
+  
+  // JSX 单引号：JSX 属性是否使用单引号
+  // "jsxSingleQuote": false,
+  
+  // Vue 文件中的脚本和样式标签缩进
+  // "vueIndentScriptAndStyle": false,
+}

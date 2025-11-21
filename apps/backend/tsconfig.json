@@ -1,0 +1,88 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    /* ===== 基础编译配置 ===== */
+    
+    // 模块系统：指定生成的模块格式
+    // commonjs: 传统的 Node.js 模块格式，最兼容
+    // nodenext: 现代 Node.js 模块格式，支持 ES 模块
+    "module": "commonjs",
+    
+    // 编译目标：指定编译后的 JavaScript 版本
+    // ES2020: 稳定且广泛支持的版本，包含可选链、空值合并等特性
+    "target": "ES2020",
+    
+    // 输出目录：编译后的文件存放位置
+    "outDir": "./dist",
+    
+    /* ===== 基础类型检查 ===== */
+    
+    // 严格模式：关闭所有严格类型检查（适合初学者）
+    // true: 开启严格检查，代码更安全但要求更高
+    // false: 宽松检查，更容易上手
+    "strict": false,
+    
+    // ES 模块互操作：允许 import 导入 CommonJS 模块
+    // 让 import 和 require 可以混用
+    "esModuleInterop": true,
+    
+    // 跳过库检查：不检查第三方库的类型定义文件
+    // 提高编译速度，避免第三方库的类型错误
+    "skipLibCheck": true,
+    
+    // 强制文件名大小写一致：避免不同操作系统的文件名问题
+    // Windows 不区分大小写，Linux/Mac 区分大小写
+    "forceConsistentCasingInFileNames": true,
+    
+    /* ===== NestJS 必需配置 ===== */
+    
+    // 生成装饰器元数据：NestJS 依赖注入系统必需
+    // 让 @Injectable、@Controller 等装饰器正常工作
+    "emitDecoratorMetadata": true,
+    
+    // 实验性装饰器：启用装饰器语法支持
+    // 支持 @Controller、@Get、@Post 等装饰器
+    "experimentalDecorators": true
+    
+    /* ===== 进阶功能（已注释，需要时可启用） ===== */
+    
+    // 模块解析策略：如何查找模块文件
+    // "moduleResolution": "node",
+    
+    // 解析 package.json 的 exports 字段：现代模块解析
+    // "resolvePackageJsonExports": true,
+    
+    // 独立模块：每个文件作为独立模块编译
+    // "isolatedModules": true,
+    
+    // 生成声明文件：生成 .d.ts 类型定义文件
+    // "declaration": true,
+    
+    // 移除注释：编译时删除所有注释
+    // "removeComments": true,
+    
+    // 允许合成默认导入：import React from 'react'
+    // "allowSyntheticDefaultImports": true,
+    
+    // 生成源码映射：调试时可以看到原始 TypeScript 代码
+    // "sourceMap": true,
+    
+    // 基础路径：模块解析的根目录
+    // "baseUrl": "./",
+    
+    // 增量编译：只编译修改过的文件，提高编译速度
+    // "incremental": true,
+    
+    // 严格空值检查：null 和 undefined 的严格检查
+    // "strictNullChecks": true,
+    
+    // 不允许隐式 any：必须明确指定类型
+    // "noImplicitAny": true,
+    
+    // 严格的 bind/call/apply：检查函数调用的类型
+    // "strictBindCallApply": true,
+    
+    // switch 语句必须有 break：防止意外的 fallthrough
+    // "noFallthroughCasesInSwitch": true
+  }
+}

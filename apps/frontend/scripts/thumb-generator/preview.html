@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ECharts Preview</title>
+	<!-- 引入 ECharts -->
+	<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #20262f;
+		}
+		#chart {
+			width: 800px;
+			height: 600px;
+		}
+	</style>
+</head>
+<body>
+	<div id="chart"></div>
+	<script>
+		window.renderChart = function(option) {
+			const chart = echarts.init(document.getElementById('chart'));
+			chart.setOption(option);
+		}
+	</script>
+</body>
+</html>

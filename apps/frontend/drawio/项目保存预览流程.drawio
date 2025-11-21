@@ -1,0 +1,16 @@
+<mxfile host="65bd71144e">
+    <diagram id="4jC4ZEl4G89g1WHCy1nT" name="第 1 页">
+        <mxGraphModel dx="1396" dy="1199" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="项目预览页" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="750" y="70" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="编辑器" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="750" y="730" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
