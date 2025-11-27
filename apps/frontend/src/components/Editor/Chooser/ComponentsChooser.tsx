@@ -17,7 +17,7 @@ import {
   SidebarMenuItem,
   SidebarFooter,
 } from "@/components/ui/sidebar"
-import type { ConponentsAttribute } from "@/types/components"
+import type { ConponentsAttribute } from "@/types/charts-components"
 import { allKindsOfCharts } from "@/config/charts_index"
 import { Pagination } from "antd"
 
@@ -75,7 +75,7 @@ function ComponentsShower({ currentPageComponents }: ComponentsShowerProps) {
              border-nebula-border-accent rounded-nebula-xl shadow-nebula-glow"
             onDragStart={(e) => {
               // 原生拖拽api只能传递字符串，所以需要将组件配置对象转换为JSON字符串
-              e.dataTransfer?.setData("text/plain", JSON.stringify(chart.options))
+              e.dataTransfer?.setData("text/plain", JSON.stringify(chart))
             }}
           >
             <img src={`/src/assets/thumbs/${chart.type}/${chart.id}.png`} alt=""  className="w-full h-full object-contain"/>

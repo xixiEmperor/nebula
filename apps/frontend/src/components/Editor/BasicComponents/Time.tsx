@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import type { TimeComponentProps } from "@/types/components";
+import type { TimeComponentProps } from "@/types/charts-components";
 
 /**
  * 时间组件 - 用于显示实时时间

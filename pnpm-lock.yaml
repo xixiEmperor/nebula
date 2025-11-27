@@ -152,6 +152,15 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.2.8
         version: 1.2.8(@types/react-dom@19.2.3(@types/react@19.2.6))(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@rjsf/core':
+        specifier: ^6.1.2
+        version: 6.1.2(@rjsf/utils@6.1.2(react@19.2.0))(react@19.2.0)
+      '@rjsf/utils':
+        specifier: ^6.1.2
+        version: 6.1.2(react@19.2.0)
+      '@rjsf/validator-ajv8':
+        specifier: ^6.1.2
+        version: 6.1.2(@rjsf/utils@6.1.2(react@19.2.0))
       '@wfynbzlx666/sdk-http':
         specifier: ^0.0.3
         version: 0.0.3
@@ -1574,6 +1583,25 @@ packages:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
 
+  '@rjsf/core@6.1.2':
+    resolution: {integrity: sha512-fcEO6kArMcVIzTBoBxNStqxzAL417NDw049nmNx11pIcMwUnU5sAkSW18c8kgZOT6v1xaZhQrY+X5cBzzHy9+g==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@rjsf/utils': ^6.x
+      react: '>=18'
+
+  '@rjsf/utils@6.1.2':
+    resolution: {integrity: sha512-Px3FIkE1KK0745Qng9v88RZ0O7hcLf/1JUu0j00g+r6C8Zyokna42Hz/5TKyyQSKJqgVYcj2Z47YroVLenUM3A==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      react: '>=18'
+
+  '@rjsf/validator-ajv8@6.1.2':
+    resolution: {integrity: sha512-9P3np2d+TaZcFTEFLocbj19fqrAWB/bxtY0Y8EjP8Oiz8LL+/wUITaN3Wx9uxzWerJyphfpZXWhUS9XkllDLig==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@rjsf/utils': ^6.x
+
   '@rolldown/pluginutils@1.0.0-beta.47':
     resolution: {integrity: sha512-8QagwMH3kNCuzD8EWL8R2YPW5e4OrHNSAHRFDdmFqEwEaD/KcNKjVoumo+gP2vW5eKB2UPbM6vTYiGZX0ixLnw==}
 
@@ -2068,6 +2096,9 @@ packages:
 
   '@wfynbzlx666/sdk-http@0.0.3':
     resolution: {integrity: sha512-G8A7m4VBmkI6xUobNWrF3E2F5EP3X1QTjb3N/mbNarwpBhlWsO4QuIKNCIScsKxQJ9UOTkHhkUJkCzzKhOSrNA==}
+
+  '@x0k/json-schema-merge@1.0.2':
+    resolution: {integrity: sha512-1734qiJHNX3+cJGDMMw2yz7R+7kpbAtl5NdPs1c/0gO5kYT6s4dMbLXiIfpZNsOYhGZI3aH7FWrj4Zxz7epXNg==}
 
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
@@ -3441,6 +3472,10 @@ packages:
   jsonfile@6.2.0:
     resolution: {integrity: sha512-FGuPw30AdOIUTRMC2OMRtQV+jkVj2cfPqSeWXv1NEAJ1qZ5zb1X6z1mFhbfOB/iy3ssJCD+3KuZ8r8C3uVFlAg==}
 
+  jsonpointer@5.0.1:
+    resolution: {integrity: sha512-p/nXbhSEcu3pZRdkW1OfJhpsVtW1gd4Wa1fnQc9YLiTfAjn0312eMKimbdIQzuZl9aa9xUGaRlP9T/CJE/ditQ==}
+    engines: {node: '>=0.10.0'}
+
   jsonwebtoken@9.0.2:
     resolution: {integrity: sha512-PRp66vJ865SSqOlgqS8hujT5U4AOgMfhrwYIuIhfKaoSCZcirrmASQr8CX7cUg+RMih+hgznrjp99o+W4pJLHQ==}
     engines: {node: '>=12', npm: '>=6'}
@@ -3491,6 +3526,9 @@ packages:
   locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
+
+  lodash-es@4.17.21:
+    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
 
   lodash.includes@4.3.0:
     resolution: {integrity: sha512-W3Bx6mdkRTGtlJISOvVD/lbqjTlPPUDTMnlXZFnVwi9NKJ6tiAk6LVdlhZMm17VZisqhKcgzpO5Wz91PCt5b0w==}
@@ -3561,6 +3599,15 @@ packages:
 
   makeerror@1.0.12:
     resolution: {integrity: sha512-JmqCvUhmt43madlpFzG4BQzG2Z3m6tvQDNKdClZnO3VbIudJYmxsT0FNJMeiB2+JTSlTQTSbU8QdesVmwJcmLg==}
+
+  markdown-to-jsx@8.0.0:
+    resolution: {integrity: sha512-hWEaRxeCDjes1CVUQqU+Ov0mCqBqkGhLKjL98KdbwHSgEWZZSJQeGlJQatVfeZ3RaxrfTrZZ3eczl2dhp5c/pA==}
+    engines: {node: '>= 10'}
+    peerDependencies:
+      react: '>= 0.14.0'
+    peerDependenciesMeta:
+      react:
+        optional: true
 
   math-intrinsics@1.1.0:
     resolution: {integrity: sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==}
@@ -6559,6 +6606,33 @@ snapshots:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 
+  '@rjsf/core@6.1.2(@rjsf/utils@6.1.2(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@rjsf/utils': 6.1.2(react@19.2.0)
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      markdown-to-jsx: 8.0.0(react@19.2.0)
+      prop-types: 15.8.1
+      react: 19.2.0
+
+  '@rjsf/utils@6.1.2(react@19.2.0)':
+    dependencies:
+      '@x0k/json-schema-merge': 1.0.2
+      fast-uri: 3.1.0
+      jsonpointer: 5.0.1
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+      react: 19.2.0
+      react-is: 18.3.1
+
+  '@rjsf/validator-ajv8@6.1.2(@rjsf/utils@6.1.2(react@19.2.0))':
+    dependencies:
+      '@rjsf/utils': 6.1.2(react@19.2.0)
+      ajv: 8.17.1
+      ajv-formats: 2.1.1(ajv@8.17.1)
+      lodash: 4.17.21
+      lodash-es: 4.17.21
+
   '@rolldown/pluginutils@1.0.0-beta.47': {}
 
   '@rollup/rollup-android-arm-eabi@4.53.3':
@@ -7084,6 +7158,10 @@ snapshots:
       axios: 1.13.2
     transitivePeerDependencies:
       - debug
+
+  '@x0k/json-schema-merge@1.0.2':
+    dependencies:
+      '@types/json-schema': 7.0.15
 
   '@xtuc/ieee754@1.2.0': {}
 
@@ -8719,6 +8797,8 @@ snapshots:
     optionalDependencies:
       graceful-fs: 4.2.11
 
+  jsonpointer@5.0.1: {}
+
   jsonwebtoken@9.0.2:
     dependencies:
       jws: 3.2.2
@@ -8773,6 +8853,8 @@ snapshots:
   locate-path@6.0.0:
     dependencies:
       p-locate: 5.0.0
+
+  lodash-es@4.17.21: {}
 
   lodash.includes@4.3.0: {}
 
@@ -8830,6 +8912,10 @@ snapshots:
   makeerror@1.0.12:
     dependencies:
       tmpl: 1.0.5
+
+  markdown-to-jsx@8.0.0(react@19.2.0):
+    optionalDependencies:
+      react: 19.2.0
 
   math-intrinsics@1.1.0: {}
 

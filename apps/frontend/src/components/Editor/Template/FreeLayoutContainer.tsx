@@ -1,5 +1,5 @@
 import type { FreeLayoutArea, FreeLayoutContainerProps } from "@/types/template";
-import { useEffect, useState, useRef, memo, useCallback, useMemo } from "react";
+import { useEffect, useState, useRef, memo, useCallback, useMemo, use } from "react";
 import { Rnd } from "react-rnd";
 import UniversalRender from "../Renders/UniversalRender";
 import { useComponentsRegistry } from "@/store/componentsRegistry";
@@ -19,6 +19,12 @@ const FreeArea = memo(function FreeArea({ area, onAreaClick, onAreaUpdate, isSel
   // 拖拽状态
   const [isDragging, setIsDragging] = useState(false);
   const [isResizing, setIsResizing] = useState(false);
+
+  const { getArea } = useTemplateStroe(useShallow((state) => ({
+    getArea: state.getArea,
+  })));
+
+  console.log('test', getArea(area.id).type.endsWith('chart'))
 
   // 使用 useCallback 缓存事件处理函数
 	// 区域点击事件
@@ -56,15 +62,19 @@ const FreeArea = memo(function FreeArea({ area, onAreaClick, onAreaUpdate, isSel
   // 使用 useMemo 缓存 className，只在必要时重新计算
   // 区域容器 className
   const containerClassName = useMemo(() => {
-    const baseClass = 'border-2 rounded-nebula-lg bg-nebula-bg-glass';
+    const baseClass = 'border-2 rounded-nebula-lg';
+    const chartClass = getArea(area.id).type.endsWith('chart')
+      ? 'bg-nebula-card-gradient'
+      : '';
     // 拖拽/调整大小时移除过渡和模糊效果以提升性能
     const interactionClass = (isDragging || isResizing) ? '' : 'transition-all duration-300 backdrop-blur-glass';
     const stateClass = isSelected 
-      ? 'border-nebula-border-accent shadow-nebula-glow' 
-      : 'border-nebula-border-primary hover:border-nebula-border-accent';
+      ? 'border-none shadow-nebula-glow' 
+      : 'border-none hover:border-nebula-border-accent';
     
-    return `${baseClass} ${interactionClass} ${stateClass}`;
+    return `${baseClass} ${interactionClass} ${stateClass} ${chartClass}`;
   }, [isSelected, isDragging, isResizing]);
+  console.log(containerClassName)
 
   // 使用 useMemo 缓存 style 对象
   // 区域容器 style
@@ -213,6 +223,23 @@ export default function FreeLayoutContainer({
       if (droppedData) {
         try {
           const chartOptions = JSON.parse(droppedData);
+          console.log(chartOptions)
+
+          let initWidth
+          let initHeight
+          
+          // 计算组件初始尺寸
+          if (chartOptions.type.startsWith('basic') 
+            && chartOptions.type !== 'basic.container'
+            && chartOptions.type !== 'basic.image'
+          ) {
+            initWidth = chartOptions.fontSize * (chartOptions.format ?? chartOptions.content).length
+            initHeight = chartOptions.fontSize * 1.5
+          }
+          else {
+            initWidth = 400
+            initHeight = 300
+          }
           
           // 计算相对画布的位置
           const rect = canvas.getBoundingClientRect();
@@ -222,17 +249,18 @@ export default function FreeLayoutContainer({
           // 创建新区域
           const newArea: FreeLayoutArea = {
             id: `area-${Date.now()}`,
+            type: chartOptions.type,
             name: chartOptions.title?.text || '自定义区域',
             position: 'absolute',
             left: Math.max(0, x - 200), // 默认宽度一半
             top: Math.max(0, y - 150),  // 默认高度一半
-            width: 400,
-            height: 300,
+            width: initWidth,
+            height: initHeight,
             zIndex: areas.length + 1,
           };
 
           setAreas(prev => [...prev, newArea]);
-          setComponentsRegistry(newArea.id, chartOptions);
+          setComponentsRegistry(newArea.id, chartOptions.options ?? chartOptions);
           onAreaCreate?.(newArea);
           setSelectedAreaId(newArea.id);
 

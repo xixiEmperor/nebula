@@ -14,7 +14,7 @@ import type {
   TimeComponentProps,
   MarqueeComponentProps,
   ContainerComponentProps,
-} from "@/types/components";
+} from "@/types/charts-components";
 import ColorPicker from "./ColorPicker";
 
 interface BasicConfigPanelProps {

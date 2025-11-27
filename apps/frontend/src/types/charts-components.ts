@@ -303,7 +303,8 @@ export interface ConponentsAttribute{
   id: string,
   name: string,
   type: ComponentsType,
-  options: ChartAttribute | BasicComponentProps | TextComponentProps | TitleComponentProps | ImageComponentProps | TimeComponentProps | MarqueeComponentProps | ContainerComponentProps,
+  options: ChartAttribute | BasicComponentProps | TextComponentProps | TitleComponentProps 
+    | ImageComponentProps | TimeComponentProps | MarqueeComponentProps | ContainerComponentProps,
   children?: ConponentsAttribute[],
   defaultProps?: Record<string, any>,
   dataSource?: DataSourceConfig, // 数据源配置

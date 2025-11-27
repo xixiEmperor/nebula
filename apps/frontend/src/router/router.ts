@@ -15,6 +15,7 @@ const EditorPage = lazy(() => import("@/pages/editor"))
 const Project = lazy(() => import("@/components/Projects/components/Project"))
 const ComponentsLibraryPage = lazy(() => import("@/pages/components"))
 const TemplatesLibraryPage = lazy(() => import("@/pages/templates"))
+const RJSFDemo = lazy(() => import("@/components/Editor/SettingBar/setting-form"))
 
 /**
  * 路由配置
@@ -27,6 +28,11 @@ export const router = createBrowserRouter([
   {
     path: "/login",
     Component: AuthPage,
+  },
+  {
+
+   path: "/rjsf-demo",
+   Component: RJSFDemo,
   },
   {
     path: "/projects",

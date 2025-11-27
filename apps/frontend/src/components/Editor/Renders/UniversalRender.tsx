@@ -4,7 +4,7 @@
  */
 
 import type { RenderProps } from "@/types/render";
-import type { ComponentsType } from "@/types/components";
+import type { ComponentsType } from "@/types/charts-components";
 import { useComponentsRegistry } from "@/store/componentsRegistry";
 import { useShallow } from "zustand/react/shallow";
 import { memo } from "react";

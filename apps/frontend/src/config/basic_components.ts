@@ -1,4 +1,4 @@
-import type { ConponentsAttribute } from "@/types/components";
+import type { ConponentsAttribute } from "@/types/charts-components";
 
 /**
  * 基础组件配置

@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react"
 import { allKindsOfCharts } from "@/config/charts_index"
-import type { ConponentsAttribute } from "@/types/components"
+import type { ConponentsAttribute } from "@/types/charts-components"
 import Header from "./Header/Header"
 
 // 组件库页面（核心展示组件）

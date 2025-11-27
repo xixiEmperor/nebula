@@ -6,7 +6,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import type { ChartAttribute } from "@/types/components";
+import type { ChartAttribute } from "@/types/charts-components";
 import ColorPicker from "./ColorPicker";
 
 interface ChartConfigPanelProps {

@@ -1,4 +1,4 @@
-import type { ConponentsAttribute, ChartAttribute } from "@/types/components";
+import type { ConponentsAttribute, ChartAttribute } from "@/types/charts-components";
 import _ from "lodash";
 
 /**

@@ -1,4 +1,4 @@
-import type { ContainerComponentProps } from "@/types/components";
+import type { ContainerComponentProps } from "@/types/charts-components";
 
 /**
  * 容器组件 - 可放置子组件的容器

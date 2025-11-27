@@ -12,7 +12,7 @@ import type {
   TimeComponentProps,
   MarqueeComponentProps,
   ContainerComponentProps,
-} from "@/types/components";
+} from "@/types/charts-components";
 import { useComponentsRegistry } from "@/store/componentsRegistry";
 import { useShallow } from "zustand/react/shallow";
 import { memo } from "react";

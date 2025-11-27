@@ -7,7 +7,7 @@ import { useComponentsRegistry } from "@/store/componentsRegistry";
 import { useTemplateStroe } from "@/store/templateStore";
 import { useShallow } from "zustand/react/shallow";
 import { useMemo } from "react";
-import type { ChartAttribute, BasicComponentsType } from "@/types/components";
+import type { ChartAttribute, BasicComponentsType } from "@/types/charts-components";
 import EmptyState from "./EmptyState";
 import ChartConfigPanel from "./ChartConfigPanel";
 import BasicConfigPanel from "./BasicConfigPanel";

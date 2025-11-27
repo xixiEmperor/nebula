@@ -3,7 +3,7 @@
  * 包含各种柱状图的配置模板和组件定义
  */
 
-import type { ConponentsAttribute, ChartAttribute } from "@/types/components";
+import type { ConponentsAttribute, ChartAttribute } from "@/types/charts-components";
 import _ from "lodash";
 
 /**

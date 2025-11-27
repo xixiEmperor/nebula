@@ -1,4 +1,4 @@
-import type { TitleComponentProps } from "@/types/components";
+import type { TitleComponentProps } from "@/types/charts-components";
 
 /**
  * 标题组件 - 用于显示标题文字

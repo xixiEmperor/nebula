@@ -37,7 +37,7 @@ function Area({ area, onAreaClick }: AreaProps) {
         try {
           // 解析拖拽数据
           const chartOptions = JSON.parse(droppedData)
-          setComponentsRegistry(area.id, chartOptions)
+          setComponentsRegistry(area.id, chartOptions.options)
         } catch (error) {
           console.error("解析拖拽数据失败:", error)
         }

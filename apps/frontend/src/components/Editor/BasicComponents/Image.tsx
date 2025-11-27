@@ -1,4 +1,4 @@
-import type { ImageComponentProps } from "@/types/components";
+import type { ImageComponentProps } from "@/types/charts-components";
 
 /**
  * 图片组件 - 用于显示图片

@@ -1,4 +1,4 @@
-import type { TextComponentProps } from "@/types/components";
+import type { TextComponentProps } from "@/types/charts-components";
 
 /**
  * 文本组件 - 用于显示静态或动态文本
@@ -17,7 +17,7 @@ export default function Text({
   return (
     <div
       id={id}
-      className={`w-full h-full flex items-center ${className}`}
+      className={`w-full h-full flex items-center ${className} border-none`}
       style={{
         fontSize: `${fontSize}px`,
         color,

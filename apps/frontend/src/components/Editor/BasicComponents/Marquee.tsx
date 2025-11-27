@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import type { MarqueeComponentProps } from "@/types/components";
+import type { MarqueeComponentProps } from "@/types/charts-components";
 
 /**
  * 滚动文字组件 - 跑马灯效果

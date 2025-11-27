@@ -24,9 +24,6 @@ interface TemplateStore {
 	
 	// 查询区域
 	getArea: (areaId: string) => TemplateArea | FreeLayoutArea | undefined;
-	
-	// 获取所有区域
-	getAllAreas: () => (TemplateArea | FreeLayoutArea)[];
 }
 
 export const useTemplateStroe = create<TemplateStore>()(
@@ -79,12 +76,5 @@ export const useTemplateStroe = create<TemplateStore>()(
 			}
 			return undefined;
 		},
-		
-		// 获取所有区域
-		getAllAreas: () => {
-			const template = get().template;
-			return template ? template.areas : [];
-		},
-
 	}))
 )

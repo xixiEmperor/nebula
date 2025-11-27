@@ -10,6 +10,7 @@ export type LayoutMode = 'grid' | 'free';
 // 模板布局区域定义（网格布局）
 export interface TemplateArea {
   id: string;
+  type: string;
   name: string;
   x: number; // 网格位置 X
   y: number; // 网格位置 Y
@@ -20,21 +21,22 @@ export interface TemplateArea {
   maxW?: number; // 最大宽度
   maxH?: number; // 最大高度
   description?: string; // 区域用途描述
-  attribute?: import("@/types/components").ChartAttribute; // 区域的图表属性
+  attribute?: import("@/types/charts-components").ChartAttribute; // 区域的图表属性
 }
 
 // 自由布局区域定义
 export interface FreeLayoutArea {
   id: string;
+  type: string;
   name: string;
   position: 'absolute';
-  left: number;   // 像素值
-  top: number;    // 像素值
-  width: number;  // 像素值
-  height: number; // 像素值
+  left: number;   // 像素值 或 '%'
+  top: number;    // 像素值 或 '%'
+  width: number | string;  // 像素值 或 '%'
+  height: number | string; // 像素值 或 '%'
   zIndex?: number;
   description?: string;
-  attribute?: import("@/types/components").ChartAttribute;
+  attribute?: import("@/types/charts-components").ChartAttribute;
 }
 
 // 大屏模板定义（网格布局）

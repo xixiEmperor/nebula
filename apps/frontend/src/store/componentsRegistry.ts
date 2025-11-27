@@ -10,7 +10,7 @@
 
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer"
-import type { ChartAttribute, ConponentsAttribute } from "@/types/components"
+import type { ChartAttribute, ConponentsAttribute } from "@/types/charts-components"
 import { enableMapSet } from "immer";
 
 /**
@@ -32,14 +32,6 @@ interface ComponentsRegistryStore {
   } | null;
   setCurrentArea: (areaId: string, attribute: ComponentConfig) => void;
   resetCurrentArea: () => void;
-  // 拖拽的组件option
-  pickedChartOption: ComponentConfig | null;
-  setPickedChartOption: (option: ComponentConfig) => void;
-  // 获取当前区域
-  getCurrentArea: () => {
-    areaId: string;
-    attribute: ComponentConfig;
-  } | null;
 }
 
 // 允许使用map和set
@@ -98,14 +90,6 @@ export const useComponentsRegistry = create<ComponentsRegistryStore>()(
     // 重置当前区域
     resetCurrentArea: () => set((state) => {
       state.currentArea = null;
-    }),
-    
-    // 拖拽的组件option
-    pickedChartOption: null,
-
-    // 设置拖拽的组件option
-    setPickedChartOption: (option: ComponentConfig) => set((state) => {
-      state.pickedChartOption = option;
-    }),
+    })
   }))
 );
